@@ -102,9 +102,12 @@ model.fit(X_train_scaled ,y_train_onehot, epochs=5,
 metrics = pd.DataFrame(model.history.history)
 metrics.head()
 metrics[['accuracy','val_accuracy']].plot()
+print("Karthikeyan\n212221230046")
 metrics[['loss','val_loss']].plot()
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
+print("Karthikeyan\n212221230046")
 print(confusion_matrix(y_test,x_test_predictions))
+print("Karthikeyan\n212221230046")
 print(classification_report(y_test,x_test_predictions))
 img = image.load_img('imagefive.jpg')
 type(img)
@@ -117,12 +120,14 @@ x_single_prediction = np.argmax(
     model.predict(img_28_gray_scaled.reshape(1,28,28,1)),
      axis=1)
 print(x_single_prediction)
+print("Karthikeyan\n212221230046")
 plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 img_28_gray_inverted = 255.0-img_28_gray
 img_28_gray_inverted_scaled = img_28_gray_inverted.numpy()/255.0
 x_single_prediction = np.argmax(
     model.predict(img_28_gray_inverted_scaled.reshape(1,28,28,1)),
      axis=1)
+print("Karthikeyan\n212221230046")
 print(x_single_prediction)
 ```
 
